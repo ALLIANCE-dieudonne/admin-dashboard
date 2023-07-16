@@ -4,4 +4,4 @@ const router = express.Router();
 
 router.get("/sales", getSales);
 
-module.exports = router;
+export default router;

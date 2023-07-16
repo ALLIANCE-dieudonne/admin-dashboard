@@ -4,4 +4,4 @@ import { getUser, getDashboardStats } from "../controllers/generalController.js"
 
 router.get("/user/:id", getUser);
 router.get("/dashboard", getDashboardStats);
-module.exports = router;
+export default router;

@@ -5,4 +5,4 @@ const router = express.Router();
 
 router.get("/admin", getAdmins);
 
-module.exports = router;
+export default router

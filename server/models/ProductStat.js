@@ -25,4 +25,4 @@ const productStatSchema = new mongoose.Schema(
 
 const ProductStat = mongoose.model("ProductStat", productStatSchema);
 
-module.exports = ProductStat;
+export default ProductStat;

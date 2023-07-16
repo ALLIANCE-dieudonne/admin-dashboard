@@ -1,5 +1,4 @@
-const OverallStat = require("../models/OverallStat");
-
+import OverallStat from "../models/OverallStat";
  const getSales = async (req, res) => {
   try {
     const overallStat = await OverallStat.find();

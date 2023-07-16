@@ -1,6 +1,6 @@
-const User = require("../models/User");
-const OverallStat = require("../models/OverallStat");
-const Transaction = require("../models/Transaction");
+import User from "../models/User";
+import Transaction from "../models/Transaction";
+import OverallStat from "../models/OverallStat";
 
 const getUser = async (req, res) => {
   try {
@@ -58,6 +58,5 @@ const getDashboardStats = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
-
 
 module.exports = { getUser, getDashboardStats };

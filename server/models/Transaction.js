@@ -1,5 +1,4 @@
-const mongoose = require("mongoose");
-
+import mongoose from "mongoose";
 const transactionSchema = new mongoose.Schema({
   userId: String,
   cost: String,

@@ -11,7 +11,6 @@ const Layout = () => {
   const theme = useTheme();
   const isNonMobile = theme.breakpoints.up('sm');
 
-  if(!isNonMobile) {console.log("second time")}
   const [isSidebarOpen,SetIsSidebarOpen] = useState(true);
   const userId = useSelector((state)=> state.global.userId)
   const {data} = useGetUserQuery(userId);

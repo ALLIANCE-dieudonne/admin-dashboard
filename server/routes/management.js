@@ -1,7 +1,5 @@
-const express = require("express");
-const {
-  getAdmins,
-} = require("../controllers/managmentController");
+import express from "express";
+import { getAdmins } from "../controllers/managmentController";
 
 const router = express.Router();
 

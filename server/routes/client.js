@@ -1,10 +1,10 @@
-const express = require("express");
-const {
+import express from "express";
+import {
   getProducts,
   getCustomers,
   getTransactions,
-  getGeography
-} = require("../controllers/clientController");
+  getGeography,
+} from "../controllers/clientController";
 const router = express.Router();
 
 router.get("/products", getProducts);

@@ -1,7 +1,6 @@
-const express = require("express");
+import express from "express";
 const router = express.Router();
-const {getUser, getDashboardStats} = require('../controllers/generalController');
-
+import { getUser, getDashboardStats } from "../controllers/generalController";
 
 router.get("/user/:id", getUser);
 router.get("/dashboard", getDashboardStats);

@@ -1,31 +1,30 @@
-const express = require("express");
-const dotenv = require("dotenv");
-const bodyParser = require("body-parser");
-const morgan = require("morgan");
-const helmet = require("helmet");
-const mongoose = require("mongoose");
-const cors = require("cors");
-const clientRoutes = require("./routes/client");
-const generalRoutes = require("./routes/general");
-const managementRoutes = require("./routes/management");
-const salesRoutes = require("./routes/sales");
+import express from "express";
+import dotenv from "dotenv";
+import bodyParser from "body-parser";
+import morgan from "morgan";
+import helmet from "helmet";
+import mongoose from "mongoose";
+import cors from "cors";
+import clientRoutes from "./routes/client";
+import generalRoutes from "./routes/general";
+import managementRoutes from "./routes/management";
+import salesRoutes from "./routes/sales";
 
 // data import
-const Product = require("./models/Products");
-const ProductStat = require("./models/ProductStat");
-const User = require("./models/User");
-const Transaction = require('./models/Transaction')
-const OverallStat = require("./models/OverallStat");
-const AffiliateStat = require("./models/AffiliateStat")
-const {
+import Product from "./models/Products";
+import ProductStat from "./models/ProductStat";
+import User from "./models/User";
+import Transaction from "./models/Transaction";
+import OverallStat from "./models/OverallStat";
+import AffiliateStat from "./models/AffiliateStat";
+import {
   dataUser,
   dataProduct,
   dataProductStat,
   dataTransaction,
   dataOverallStat,
-  dataAffiliateStat
-} = require("./data/index");
-
+  dataAffiliateStat,
+} from "./data/index";
 
 
 // CONFIGURATIONS

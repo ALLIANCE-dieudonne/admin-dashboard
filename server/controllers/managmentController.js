@@ -1,6 +1,4 @@
-const User = require("../models/User.js");
-const Transaction = require("../models/Transaction.js");
-const mongoose = require("mongoose");
+import User from "../models/User.js";
 
 const getAdmins = async (req, res) => {
   try {
@@ -10,7 +8,5 @@ const getAdmins = async (req, res) => {
     res.status(404).json({ message: error.message });
   }
 };
-
-
 
 module.exports = { getAdmins };

@@ -20,7 +20,6 @@ const Products = () => {
           columnGap="1.3%"
           sx={{ "& > div": { gridColumn: isNonMobile ? undefined : "span 4" } }}
         >
-          {/* {console.log("this is the data"+data)} */}
           {data &&
             data.map(
               ({

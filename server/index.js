@@ -37,6 +37,16 @@ app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use(morgan("common"));
 app.use(cors());
 
+// CORS options
+const corsOptions = {
+  origin: "*", // Allow requests from any origin
+  methods: "GET, POST, PUT, DELETE", // Allow specified HTTP methods
+  allowedHeaders: "Content-Type, Authorization", // Allow specified headers
+};
+
+// Enable CORS for all routes
+app.use(cors(corsOptions));
+
 //Routes
 app.use("/client", clientRoutes);
 app.use("/general", generalRoutes);
@@ -66,7 +76,7 @@ mongoose
     // OverallStat.insertMany(dataOverallStat);
     // AffiliateStat.insertMany(dataAffiliateStat);
 
-    console.log(`Successful connected to mongodb!`);
+    console.log(`Successful connected to MongoDB!`);
   })
   .catch((error) => {
     console.log(`${error} did not connect!`);

@@ -2266,7 +2266,7 @@ export const dataOverallStat = [
   },
 ];
 
-export const dataProduct =  dataProduct = [
+export const dataProduct = [
   {
     _id: "63701d24f03239c72c00018e",
     name: "Port Beckley",

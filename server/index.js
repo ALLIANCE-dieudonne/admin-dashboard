@@ -11,12 +11,12 @@ import managementRoutes from "./routes/management.js";
 import salesRoutes from "./routes/sales.js";
 
 // data import
-import Product from "./models/Products";
-import ProductStat from "./models/ProductStat";
-import User from "./models/User";
-import Transaction from "./models/Transaction";
-import OverallStat from "./models/OverallStat";
-import AffiliateStat from "./models/AffiliateStat";
+import Product from "./models/Products.js";
+import ProductStat from "./models/ProductStat.js";
+import User from "./models/User.js";
+import Transaction from "./models/Transaction.js";
+import OverallStat from "./models/OverallStat.js";
+import AffiliateStat from "./models/AffiliateStat.js";
 import {
   dataUser,
   dataProduct,
@@ -24,7 +24,7 @@ import {
   dataTransaction,
   dataOverallStat,
   dataAffiliateStat,
-} from "./data/index";
+} from "./data/index.js";
 
 
 // CONFIGURATIONS

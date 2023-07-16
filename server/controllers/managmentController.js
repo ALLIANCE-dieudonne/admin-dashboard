@@ -1,6 +1,6 @@
 import User from "../models/User.js";
 
-const getAdmins = async (req, res) => {
+export const getAdmins = async (req, res) => {
   try {
     const admins = await User.find({ role: "admin" }).select("-password");
     res.status(200).json(admins);
@@ -9,4 +9,3 @@ const getAdmins = async (req, res) => {
   }
 };
 
-module.exports = { getAdmins };

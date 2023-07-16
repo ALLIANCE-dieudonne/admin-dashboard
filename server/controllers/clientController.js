@@ -3,7 +3,7 @@ import ProductStat from "../models/ProductStat.js";
 import Transaction from "../models/Transaction.js";
 import getCountryIso3 from "country-iso-2-to-3";
 import User from "../models/User.js";
-const getProducts = async (req, res) => {
+export const getProducts = async (req, res) => {
   try {
     const products = await Products.find();
 
@@ -26,7 +26,7 @@ const getProducts = async (req, res) => {
   }
 };
 
-const getCustomers = async (req, res) => {
+export const getCustomers = async (req, res) => {
   try {
     const customers = await User.find({ role: "user" }).select("-password");
     res.status(200).json(customers);
@@ -35,7 +35,7 @@ const getCustomers = async (req, res) => {
   }
 };
 
-const getTransactions = async (req, res) => {
+export const getTransactions = async (req, res) => {
   try {
     //how the sort should look like {"field": "userId", "sort": "desc"}
     const { page = 1, pageSize = 20, sort = null, search = "" } = req.query;
@@ -76,7 +76,7 @@ const getTransactions = async (req, res) => {
   }
 };
 
-const getGeography = async (req, res) => {
+export const getGeography = async (req, res) => {
   try {
     const users = await User.find();
 
@@ -101,9 +101,4 @@ const getGeography = async (req, res) => {
   }
 };
 
-module.exports = {
-  getProducts,
-  getCustomers,
-  getTransactions,
-  getGeography,
-};
+

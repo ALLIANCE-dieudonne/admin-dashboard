@@ -1,5 +1,5 @@
 import OverallStat from "../models/OverallStat.js";
- const getSales = async (req, res) => {
+ export const getSales = async (req, res) => {
   try {
     const overallStat = await OverallStat.find();
     res.status(200).json( overallStat[0])
@@ -8,4 +8,3 @@ import OverallStat from "../models/OverallStat.js";
   }
 };
 
-module.exports = getSales;

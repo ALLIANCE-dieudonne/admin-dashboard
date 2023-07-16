@@ -2,7 +2,7 @@ import User from "../models/User.js";
 import Transaction from "../models/Transaction.js";
 import OverallStat from "../models/OverallStat.js";
 
-const getUser = async (req, res) => {
+export const getUser = async (req, res) => {
   try {
     const { id } = req.params;
     const user = await User.findById(id);
@@ -12,7 +12,7 @@ const getUser = async (req, res) => {
   }
 };
 
-const getDashboardStats = async (req, res) => {
+export const getDashboardStats = async (req, res) => {
   try {
     // Hard coded stats
     const currentMonth = "November";
@@ -59,4 +59,3 @@ const getDashboardStats = async (req, res) => {
   }
 };
 
-module.exports = { getUser, getDashboardStats };

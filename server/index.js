@@ -5,10 +5,10 @@ import morgan from "morgan";
 import helmet from "helmet";
 import mongoose from "mongoose";
 import cors from "cors";
-import clientRoutes from "./routes/client";
-import generalRoutes from "./routes/general";
-import managementRoutes from "./routes/management";
-import salesRoutes from "./routes/sales";
+import clientRoutes from "./routes/client.js";
+import generalRoutes from "./routes/general.js";
+import managementRoutes from "./routes/management.js";
+import salesRoutes from "./routes/sales.js";
 
 // data import
 import Product from "./models/Products";

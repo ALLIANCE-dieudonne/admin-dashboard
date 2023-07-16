@@ -1,8 +1,8 @@
-import Products from "../models/Products";
-import ProductStat from "../models/ProductStat";
-import Transaction from "../models/Transaction";
+import Products from "../models/Products.js";
+import ProductStat from "../models/ProductStat.js";
+import Transaction from "../models/Transaction.js";
 import getCountryIso3 from "country-iso-2-to-3";
-import User from "../models/User";
+import User from "../models/User.js";
 const getProducts = async (req, res) => {
   try {
     const products = await Products.find();
